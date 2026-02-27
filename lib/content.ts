@@ -1,4 +1,4 @@
-export type ProjectStatus = 'selling' | 'construction' | 'delivered' | 'upcoming';
+export type ProjectStatus = 'selling' | 'construction' | 'pre-construction' | 'delivered' | 'upcoming';
 export type ProjectType = 'residential' | 'commercial' | 'mixed';
 
 export interface VirtualTour {

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { setRequestLocale } from 'next-intl/server';
 
 import Container from '@/components/ui/Container';
 
@@ -45,6 +46,7 @@ const copyByLocale = {
 
 export default function CookiesPage({ params }: { params: { locale: string } }) {
   const locale = (['es', 'en', 'de'].includes(params.locale) ? params.locale : 'es') as Locale;
+  setRequestLocale(locale);
   const copy = copyByLocale[locale];
 
   return (

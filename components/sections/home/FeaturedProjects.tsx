@@ -27,24 +27,28 @@ const summaryByLocale = {
   es: {
     selling: 'Ubicación premium seleccionada estratégicamente. Optimizado para Airbnb y renta corta de alta demanda.',
     construction: 'En construcción. Micro-apartamentos premium alineados con el boom de Airbnb en Asunción.',
+    'pre-construction': 'En pre-construcción. Oportunidad de entrada a precio de lanzamiento con máximo potencial de apreciación.',
     delivered: 'Proyecto entregado y completamente comercializado. Disponible en mercado de reventa.',
     upcoming: 'Próximamente. Ubicación de vanguardia seleccionada para máximo retorno.',
   },
   en: {
     selling: 'Prime location strategically selected. Optimized for Airbnb and high-demand short-stay rentals.',
     construction: 'Under construction. Premium studio apartments aligned with Asunción\'s Airbnb boom.',
+    'pre-construction': 'Pre-construction phase. Early-entry pricing with maximum appreciation potential.',
     delivered: 'Delivered and fully sold out. Available in the resale market.',
     upcoming: 'Coming soon. Future-ready location selected for maximum returns.',
   },
   de: {
     selling: 'Erstklassige, strategisch gewählte Lage. Optimiert für Airbnb und Kurzzeitmiete mit hoher Nachfrage.',
     construction: 'Im Bau. Premium-Studios abgestimmt auf Asuncións Airbnb-Boom.',
+    'pre-construction': 'Vorverkaufsphase. Einstiegspreis mit maximalem Wertsteigerungspotenzial.',
     delivered: 'Übergeben und vollständig vermarktet. Im Wiederverkaufsmarkt verfügbar.',
     upcoming: 'Demnächst. Zukunftsorientierte Lage für maximale Rendite.',
   },
   pt: {
     selling: 'Localização premium estrategicamente selecionada. Otimizado para Airbnb e aluguel de curta duração.',
     construction: 'Em construção. Apartamentos estúdio premium alinhados com o boom do Airbnb em Assunção.',
+    'pre-construction': 'Fase de pré-construção. Preço de entrada com máximo potencial de valorização.',
     delivered: 'Entregue e completamente comercializado. Disponível no mercado de revenda.',
     upcoming: 'Em breve. Localização de vanguarda selecionada para o máximo retorno.',
   },

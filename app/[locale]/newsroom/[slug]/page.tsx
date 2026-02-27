@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -314,6 +315,7 @@ function formatDate(dateStr: string, locale: Locale) {
 }
 
 export default function NewsDetailPage({ params }: NewsDetailPageProps) {
+  setRequestLocale(params.locale);
   const baseArticle = newsroomBySlug[params.slug as keyof typeof newsroomBySlug];
   if (!baseArticle) notFound();
 

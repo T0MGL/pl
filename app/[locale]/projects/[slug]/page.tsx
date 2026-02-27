@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -250,6 +251,7 @@ export function generateStaticParams() {
 }
 
 export default function ProjectPage({ params }: ProjectPageProps) {
+  setRequestLocale(params.locale);
   const project = projectsBySlug[params.slug as keyof typeof projectsBySlug];
   if (!project) notFound();
 
@@ -371,7 +373,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                   ? 'https://schema.org/InStock'
                   : project.status === 'delivered'
                     ? 'https://schema.org/LimitedAvailability'
-                    : project.status === 'pre-construction'
+                    : (project.status as string) === 'pre-construction'
                       ? 'https://schema.org/PreSale'
                       : 'https://schema.org/PreOrder',
               priceCurrency: 'USD',

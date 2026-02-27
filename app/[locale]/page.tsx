@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 import ContactCTA from '@/components/sections/home/ContactCTA';
 import FeaturedProjects from '@/components/sections/home/FeaturedProjects';
@@ -110,6 +110,7 @@ export async function generateMetadata({ params: { locale } }: HomePageProps): P
 }
 
 export default async function HomePage({ params: { locale } }: HomePageProps) {
+  setRequestLocale(locale);
   const tHero = await getTranslations({ locale, namespace: 'home.hero' });
   const tStorytelling = await getTranslations({ locale, namespace: 'home.storytelling' });
   const tProjects = await getTranslations({ locale, namespace: 'home.projects' });

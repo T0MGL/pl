@@ -1,3 +1,4 @@
+import { setRequestLocale } from 'next-intl/server';
 import { BarChart3, Download, FileText, Scale } from 'lucide-react';
 import type { Metadata } from 'next';
 import Image from 'next/image';
@@ -205,6 +206,7 @@ const keyMetricsByLocale = {
 
 export default function InvestorRelationsPage({ params }: { params: { locale: string } }) {
   const locale = (['es', 'en', 'de'].includes(params.locale) ? params.locale : 'es') as Locale;
+  setRequestLocale(locale);
   const copy = copyByLocale[locale];
   const keyMetrics = keyMetricsByLocale[locale];
 

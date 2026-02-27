@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
 
 import FadeIn from '@/components/animations/FadeIn';
@@ -222,6 +223,7 @@ const team = [
 
 export default function AboutPage({ params }: { params: { locale: string } }) {
   const locale = (['es', 'en', 'de', 'pt'].includes(params.locale) ? params.locale : 'es') as Locale;
+  setRequestLocale(locale);
   const copy = copyByLocale[locale];
 
   return (

@@ -1,5 +1,5 @@
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 
 import Footer from '@/components/layout/Footer';
@@ -17,6 +17,7 @@ export function generateStaticParams() {
 }
 
 export default async function LocaleLayout({ children, params: { locale } }: LocaleLayoutProps) {
+  setRequestLocale(locale);
   if (!locales.includes(locale as Locale)) {
     notFound();
   }

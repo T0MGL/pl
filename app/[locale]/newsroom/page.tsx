@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -131,6 +132,7 @@ function localizeArticle(article: (typeof newsroomArticles)[number], locale: Loc
 
 export default function NewsroomPage({ params }: { params: { locale: string } }) {
   const locale = (['es', 'en', 'de'].includes(params.locale) ? params.locale : 'es') as Locale;
+  setRequestLocale(locale);
   const copy = copyByLocale[locale];
 
   const articles = newsroomArticles.map((article) => localizeArticle(article, locale));

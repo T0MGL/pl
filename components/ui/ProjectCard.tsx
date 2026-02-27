@@ -24,6 +24,7 @@ interface ProjectCardProps {
 const statusConfig = {
   selling: { label: 'statusSelling', dot: 'bg-gold' },
   construction: { label: 'statusConstruction', dot: 'bg-amber-500' },
+  'pre-construction': { label: 'statusConstruction', dot: 'bg-amber-400' },
   delivered: { label: 'statusDelivered', dot: 'bg-emerald-500' },
   upcoming: { label: 'statusSelling', dot: 'bg-slate-400' },
 };
